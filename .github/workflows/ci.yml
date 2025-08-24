@@ -13,8 +13,12 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
+    - name: List files in workspace
+      run: ls -al
+
     - name: Make full-test.sh executable
       run: chmod +x ./full-test.sh
 
     - name: Run unit tests
       run: ./full-test.sh
+      timeout-minutes: 10
