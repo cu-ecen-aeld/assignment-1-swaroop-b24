@@ -1,0 +1,18 @@
+# Ignore build directory
+/build/
+
+# Ignore CMake generated files
+/CMakeCache.txt
+/CMakeFiles/
+/cmake_install.cmake
+/Makefile
+
+# Ignore log files
+/test.sh.log
+
+# Ignore other temporary or IDE files if needed
+*.swp
+*.tmp
+*.bak
+*.log
+.DS_Store
