@@ -16,7 +16,6 @@ jobs:
 
     - name: Build and run tests
       run: |
-        cd assignment-1
         mkdir -p build
         cd build
         cmake ..
