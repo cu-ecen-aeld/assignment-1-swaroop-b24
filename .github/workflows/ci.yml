@@ -1,22 +1,3 @@
-Run mkdir -p build
-  mkdir -p build
-  cd build
-  cmake ..
-  make
-  cd ..
-  ./full-test.sh
-  shell: /usr/bin/bash -e {0}
-CMake Warning:
-  Ignoring extra path from command line:
-
-   ".."
-
-
-CMake Error: The source directory "/home/runner/work/assignment-1-swaroop-b24/assignment-1-swaroop-b24" does not appear to contain CMakeLists.txt.
-Specify --help for usage, or press the help button on the CMake GUI.
-Error: Process completed with exit code 1.
-
-You, Now
 name: CI
 
 on:
