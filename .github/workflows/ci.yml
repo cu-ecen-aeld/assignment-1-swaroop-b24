@@ -1,24 +1,12 @@
-name: CI
-
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
+name: assignment-autotest-test
+on: [push]
 jobs:
-  build-and-test:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v3
-
-    - name: List files in workspace
-      run: ls -al
-
-    - name: Make full-test.sh executable
-      run: chmod +x ./full-test.sh
-
-    - name: Run unit tests
-      run: ./full-test.sh
-      timeout-minutes: 10
+    test:
+        container: cuaesd/aesd-autotest:unit-test
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v2
+          - name: Checkout submodules
+            run : git submodule update --init --recursive
+          - name: Run unit test
+            run: ./full-test.sh
